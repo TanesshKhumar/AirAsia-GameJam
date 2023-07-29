@@ -14,7 +14,7 @@ public class UiMainMenu : MonoBehaviour
         mainMenu.onClick.AddListener(StartMap);
     }
 
-    private void StartMap()
+    public void StartMap()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Map);
     }

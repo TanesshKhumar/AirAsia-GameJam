@@ -16,9 +16,16 @@ public class ScenesManager : MonoBehaviour
     {
         MainMenu,
         Map,
-        Malaysia01,
-        Singapore02,
-        Indonesia03
+        Malaysia02,
+        Singapore03,
+        Laos04,
+        Brunei05,
+        Cambodia06,
+        Myanmar07,
+        Vietnam08,
+        Thailand09,
+        Philippines10,
+        Indonesia11
     }
 
     public void LoadScene (Scene scene)
