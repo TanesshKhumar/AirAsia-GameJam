@@ -855,6 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 125
+  yPosLimit: -1400
 --- !u!1 &1388522642
 GameObject:
   m_ObjectHideFlags: 0

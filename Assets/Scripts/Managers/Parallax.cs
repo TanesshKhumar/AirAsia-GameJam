@@ -6,7 +6,7 @@ public class Parallax : MonoBehaviour
 {
     public float speed = 4f;
     private Vector3 StartPos;
-
+    [SerializeField] private float yPosLimit;
     void Start()
     {
         StartPos = transform.position;
@@ -17,10 +17,10 @@ public class Parallax : MonoBehaviour
     {
         transform.Translate(translation: Vector3.down * speed * Time.deltaTime); 
 
-        if(transform.position.y < -1400f)
+        if(transform.position.y < yPosLimit)
         {
             transform.position = StartPos;
         }
-
+        
     }
 }
