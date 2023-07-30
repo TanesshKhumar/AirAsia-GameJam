@@ -36,11 +36,13 @@ public class ScenesManager : MonoBehaviour
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1.0f;
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(Scene.MainMenu.ToString());
+        Time.timeScale = 1.0f;
     }
 
     public void LoadMap()
@@ -52,6 +54,7 @@ public class ScenesManager : MonoBehaviour
     public void LoadCurrentLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1.0f;
 
     }
 
