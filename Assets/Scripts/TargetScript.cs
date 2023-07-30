@@ -156,15 +156,17 @@ public class TargetScript : MonoBehaviour
         {
             if (active)
             {
-                Instantiate(miss, targetList[curTarget-2], Quaternion.identity);
+                Instantiate(miss, targetList[curTarget - 2], Quaternion.identity);
 
                 GameObject.Find("Plane").GetComponent<PlaneScript>().TakeDamage();
                 clicked = false;
 
                 active = false;
+
+                FindAnyObjectByType<AudioManager>().Play("badtap");
             }
         }
-        
+
     }
     public void Click()
     {
@@ -179,6 +181,7 @@ public class TargetScript : MonoBehaviour
                     score++;
                     active = false;
                     NextTarget();
+                    FindAnyObjectByType<AudioManager>().Play("goodtap");
 
                 }
                 else if (targetType[curTarget - 1] == 2)
@@ -196,6 +199,7 @@ public class TargetScript : MonoBehaviour
                         score++;
                         active = false;
                         NextTarget();
+                        FindAnyObjectByType<AudioManager>().Play("goodtap");
 
                     }
                 }
@@ -207,6 +211,7 @@ public class TargetScript : MonoBehaviour
                     active = false;
                     score++;
                     NextTarget();
+                    FindAnyObjectByType<AudioManager>().Play("goodtap");
 
                 }
             }

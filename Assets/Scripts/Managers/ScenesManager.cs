@@ -49,6 +49,7 @@ public class ScenesManager : MonoBehaviour
     {
         SceneManager.LoadScene(Scene.Map.ToString());
         Time.timeScale = 1.0f;
+       
     }
 
     public void LoadCurrentLevel()

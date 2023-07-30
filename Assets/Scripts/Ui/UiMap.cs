@@ -27,6 +27,8 @@ public class UiMap : MonoBehaviour
     void Start()
     {
         SetActiveUI(uiElements[i]);
+        FindAnyObjectByType<AudioManager>().Stop("gamebgm");
+        
 
         Malaysia.onClick.AddListener(StartLevelMalaysia);
         Singapore.onClick.AddListener(StartLevelSingapore);
@@ -44,56 +46,67 @@ public class UiMap : MonoBehaviour
     private void ReturnToMainMenu()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.MainMenu);
+        FindAnyObjectByType<AudioManager>().Play("bgm");
     }
 
     private void StartLevelMalaysia()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Malaysia02);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelSingapore()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Singapore03);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelLaos()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Laos04);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelBrunei()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Brunei05);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelCambodia()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Cambodia06);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelMyanmar()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Myanmar07);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelVietnam()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Vietnam08);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelThailand()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Thailand09);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelPhilippines()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Philippines10);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     private void StartLevelIndonesia()
-    {
+    { 
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Indonesia11);
+        FindAnyObjectByType<AudioManager>().Play("selectlevel");
     }
 
     public void SetActiveUI(GameObject uiElement)
@@ -118,8 +131,8 @@ public class UiMap : MonoBehaviour
 
         // Call SetActiveUI method and pass the reference to the UI element you want to activate
         SetActiveUI(uiElements[i]);
+        FindAnyObjectByType<AudioManager>().Play("buttonclick");
 
-        
     }
 
     public void OnButton2Prev()
@@ -129,5 +142,6 @@ public class UiMap : MonoBehaviour
 
         // Call SetActiveUI method and pass the reference to the UI element you want to activate
         SetActiveUI(uiElements[i]);
+        FindAnyObjectByType<AudioManager>().Play("buttonclick");
     }
 }

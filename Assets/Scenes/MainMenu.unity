@@ -456,6 +456,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380771435}
   m_CullTransparentMesh: 1
+--- !u!1 &468997779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468997781}
+  - component: {fileID: 468997780}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &468997780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468997779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0332716e166b04b4381f249a76b0ff23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: bgm
+    clip: {fileID: 8300000, guid: 4dbfd805a08cddc4cacb288f8eace07d, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    Source: {fileID: 0}
+  - name: goodtap
+    clip: {fileID: 8300000, guid: 0ea4cfccfc39158459a9f5736305239b, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: badtap
+    clip: {fileID: 8300000, guid: 2b6af7478c48b034fbe7a4d8121030a1, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: win
+    clip: {fileID: 8300000, guid: 076990110a9b65c4abc2b8cf1e3a614e, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: lose
+    clip: {fileID: 8300000, guid: 11a8d62fccd72eb4ab231860958eda8e, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: buttonclick
+    clip: {fileID: 8300000, guid: eb5b922ab6ec5f04992549e9ea01900c, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: gamebgm
+    clip: {fileID: 8300000, guid: ddb9cb786efd8c842a0e7ab41057dd53, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    Source: {fileID: 0}
+  - name: selectlevel
+    clip: {fileID: 8300000, guid: 1fd361d1dbadba445975af214c3c84c4, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: selectlevel
+    clip: {fileID: 8300000, guid: 1fd361d1dbadba445975af214c3c84c4, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+--- !u!4 &468997781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468997779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.372524, y: 0.84159786, z: 338.06873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &501600466
 GameObject:
   m_ObjectHideFlags: 0

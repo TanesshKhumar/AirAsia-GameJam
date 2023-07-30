@@ -8,6 +8,9 @@ public class UiMainMenu : MonoBehaviour
 {
     [SerializeField] Button mainMenu;
 
+   
+
+   
 
     void Start()
     {
@@ -17,6 +20,8 @@ public class UiMainMenu : MonoBehaviour
     public void StartMap()
     {
         ScenesManager.Instance.LoadScene(ScenesManager.Scene.Map);
+
+
     }
 
 }
