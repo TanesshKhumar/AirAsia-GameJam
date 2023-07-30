@@ -86,7 +86,7 @@ public class PlaneScript : MonoBehaviour
         if (transform.position.y > 7)
         {
             moveSpeed = 0;
-            Debug.Log("You Win");
+            GameObject.Find("-UI-").transform.GetChild(2).gameObject.SetActive(true); FindAnyObjectByType<AudioManager>().Play("win");
         }
     }
     public void TakeDamage()
@@ -94,7 +94,14 @@ public class PlaneScript : MonoBehaviour
         health--;
         switch (health)
         {
-            case 0: Debug.Log("You Lose"); break;
+            case 0: 
+                moveSpeed = 0; 
+                GetComponent<SpriteRenderer>().enabled = false;
+                transform.GetChild(0).GetComponent<SpriteRenderer>().enabled=false;
+                GameObject.Find("Target").GetComponent<SpriteRenderer>().enabled = false; 
+                GameObject.Find("-UI-").transform.GetChild(3).gameObject.SetActive(true); 
+                //FindAnyObjectByType<AudioManager>().Play("lose"); 
+                break;
             case 1: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.19f, 0.19f, 0.19f); break;
             case 2: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.02f, 0.09f, 0.09f); break;
             case 3: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.14f, 0.14f); break;

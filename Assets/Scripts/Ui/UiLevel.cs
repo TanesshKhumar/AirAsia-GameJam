@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 public class UiLevel : MonoBehaviour
 {
 
@@ -20,8 +16,8 @@ public class UiLevel : MonoBehaviour
     
     void Start()
     {
-        FindAnyObjectByType<AudioManager>().Stop("bgm");
-        FindAnyObjectByType<AudioManager>().Play("gamebgm");
+        //FindAnyObjectByType<AudioManager>().Stop("bgm");
+        //FindAnyObjectByType<AudioManager>().Play("gamebgm");
     }
 
     public void TogglePause()
