@@ -106,7 +106,8 @@ MonoBehaviour:
   targetType: 
   oneTap: 30
   twoTap: 60
-  hold: 100
+  indicator: {fileID: 7745015697929399733, guid: 3f19eaec8c9772d4e8158f3ecfe9fe62, type: 3}
+  miss: {fileID: 6622370689408968888, guid: 8996b1ccd01df8b449f0551b5a3d0458, type: 3}
   score: 0
 --- !u!58 &5297885152541831502
 CircleCollider2D:
