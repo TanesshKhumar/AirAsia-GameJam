@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlaneScript : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class PlaneScript : MonoBehaviour
     private Rigidbody2D rb;
     public float rotation;
 
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] public float moveSpeed = 2f;
     [SerializeField] private float roateSpeed = 1f;
+
+    [SerializeField] private int health = 5;
     void Start()
     {
         rb= GetComponent<Rigidbody2D>();
@@ -77,6 +80,25 @@ public class PlaneScript : MonoBehaviour
                 moveSpeed = 9;
                 roateSpeed = 0.05f;
             }
+        }
+
+        if (transform.position.y > 7)
+        {
+            moveSpeed = 0;
+            Debug.Log("You Win");
+        }
+    }
+    public void TakeDamage()
+    {
+        health--;
+        switch (health)
+        {
+            case 0: Debug.Log("You Lose"); break;
+            case 1: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.19f, 0.19f, 0.19f); break;
+            case 2: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.02f, 0.09f, 0.09f); break;
+            case 3: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.14f, 0.14f); break;
+            case 4: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.75f, 0.09f, 0.09f); break;
+            default: break;
         }
     }
 }

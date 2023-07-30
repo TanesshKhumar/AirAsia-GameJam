@@ -13,10 +13,10 @@ public class TargetScript : MonoBehaviour
     public List<int> targetType;
     [SerializeField] int oneTap = 30;
     [SerializeField] int twoTap = 60;
-    [SerializeField] int hold = 100;
     private Animator animator;
     private bool clicked = false;
 
+    [SerializeField] public GameObject indicator, miss;
 
     private bool active = false;
     public int score;
@@ -38,7 +38,7 @@ public class TargetScript : MonoBehaviour
             Vector2 a;
             do
             {
-                a = new Vector2(Random.Range(-1.5f, 0), Random.Range(-4f, 4f));
+                a = new Vector2(Random.Range(-1.5f, 0), Random.Range(-2.5f, 4f));
             } while (a.y - targetList[targetCount].y > -3.5 && a.y - targetList[targetCount].y < 3.5);
             targetList.Add(a);
             targetList.Add(new Vector2(0, 0));
@@ -64,16 +64,6 @@ public class TargetScript : MonoBehaviour
                 
                 AddToTheList();
             }
-        }
-        if (transform.position.y > 5)
-        {
-            Debug.Log(score);
-            //IF WIN
-
-
-            //IF LOSE
-
-
         }
     }
     private void AddToTheList()
@@ -135,7 +125,7 @@ public class TargetScript : MonoBehaviour
         Vector2 a;
         do
         {
-            a = new Vector2(Random.Range(-1.5f, 1.5f), Random.Range(-3f, 4f));
+            a = new Vector2(Random.Range(-1.5f, 1.5f), Random.Range(-2.5f, 4f));
         } while (a.y - b.y > -3 && a.y - b.y < 3);
 
         return  a;
@@ -166,7 +156,9 @@ public class TargetScript : MonoBehaviour
         {
             if (active)
             {
-                Debug.Log("missed");
+                Instantiate(miss, targetList[curTarget-2], Quaternion.identity);
+
+                GameObject.Find("Plane").GetComponent<PlaneScript>().TakeDamage();
                 clicked = false;
 
                 active = false;
@@ -176,47 +168,60 @@ public class TargetScript : MonoBehaviour
     }
     public void Click()
     {
-        if (active)
+        if (cooldownTimer <= 0)
         {
-            if (targetType[curTarget - 1] == 1)
+            if (active)
             {
-                Debug.Log("single hit");
-
-                score++;
-                active = false;
-                NextTarget();
-
-            }
-            else if (targetType[curTarget - 1] == 2)
-            {
-                if (!clicked)
+                if (targetType[curTarget - 1] == 1)
                 {
-                    Debug.Log("first hit");
-                    clicked = true;
+                    Instantiate(indicator, transform.position, Quaternion.identity);
 
-                }
-                else if (clicked)
-                {
-                    Debug.Log("double hit");
-
-                    clicked = false;
                     score++;
                     active = false;
                     NextTarget();
 
                 }
+                else if (targetType[curTarget - 1] == 2)
+                {
+                    if (!clicked)
+                    {
+                        clicked = true;
+
+                    }
+                    else if (clicked)
+                    {
+                        Instantiate(indicator, transform.position, Quaternion.identity);
+
+                        clicked = false;
+                        score++;
+                        active = false;
+                        NextTarget();
+
+                    }
+                }
+                else if (targetType[curTarget - 1] == 3)
+                {
+                    Instantiate(indicator, transform.position, Quaternion.identity);
+
+                    clicked = true;
+                    active = false;
+                    score++;
+                    NextTarget();
+
+                }
             }
-            else if (targetType[curTarget - 1] == 3)
+            else
             {
-                Debug.Log("start hold");
-
-                clicked = true;
-                active = false;
-                score++;
-                NextTarget();
-
+                cooldownTimer = 0.7f;
             }
         }
+        
+    }
+    float cooldownTimer;
+    private void FixedUpdate()
+    {
+        if (cooldownTimer >= 0)
+            cooldownTimer -= Time.deltaTime;
     }
     public void Release()
     {
@@ -227,12 +232,10 @@ public class TargetScript : MonoBehaviour
 
                 if (clicked == true)
                 {
-                    Debug.Log("end hold");
+                    Instantiate(indicator, transform.position, Quaternion.identity);
                     active= false;
                     score++;
                     NextTarget();
-
-
                 }
             }
         }

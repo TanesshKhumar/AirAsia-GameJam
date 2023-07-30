@@ -652,6 +652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 4268982568274463411, guid: 44662819d99d285479821c89e02ed822, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ab26e9728f790c41853b8ea4cc6861c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44662819d99d285479821c89e02ed822, type: 3}
 --- !u!1 &1648685555
@@ -823,6 +827,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5297885152541831601, guid: fb1b2675825c5f543881f54eb445e76f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297885152541831601, guid: fb1b2675825c5f543881f54eb445e76f, type: 3}
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
@@ -840,7 +848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297885152541831602, guid: fb1b2675825c5f543881f54eb445e76f, type: 3}
       propertyPath: targetCount
-      value: 57
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 5297885152541831603, guid: fb1b2675825c5f543881f54eb445e76f, type: 3}
       propertyPath: m_Name
@@ -916,9 +924,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7189961887419452408, guid: cd6649a3e63a04c43990a6708d72f0f2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7189961887419452409, guid: cd6649a3e63a04c43990a6708d72f0f2, type: 3}
       propertyPath: m_Name
       value: Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189961887716568629, guid: cd6649a3e63a04c43990a6708d72f0f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd6649a3e63a04c43990a6708d72f0f2, type: 3}
