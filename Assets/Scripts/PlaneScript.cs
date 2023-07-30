@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlaneScript : MonoBehaviour
 {
+    [SerializeField] public bool isEndless = false;
+
     public bool isMoving = true;
 
     private Vector3 targetPos;
@@ -48,5 +50,33 @@ public class PlaneScript : MonoBehaviour
         angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
         rotation = angle - 90f;
 
+    }
+    public float time;
+    private void FixedUpdate()
+    {
+        time += Time.deltaTime;
+        if (isEndless)
+        {
+            if (time < 120)
+            {
+                moveSpeed= 4;
+                roateSpeed= 0.3f;
+            }
+            else if (time < 180)
+            {
+                moveSpeed = 5.2f;
+                roateSpeed = 0.2f;
+            }
+            else if (time < 240)
+            {
+                moveSpeed = 6.7f;
+                roateSpeed = 0.1f;
+            }
+            else
+            {
+                moveSpeed = 9;
+                roateSpeed = 0.05f;
+            }
+        }
     }
 }

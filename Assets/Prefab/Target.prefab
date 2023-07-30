@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5297885152541831601}
   - component: {fileID: 5297885152541831602}
   - component: {fileID: 5297885152541831502}
+  - component: {fileID: -6584132588325966075}
   m_Layer: 0
   m_Name: Target
   m_TagString: target
@@ -99,9 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fcff1081bb6fb4290373582446dcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEndless: 0
   targetCount: 15
   targetList: []
-  button: {fileID: 0}
+  targetType: 
+  oneTap: 30
+  twoTap: 60
+  hold: 100
   score: 0
 --- !u!58 &5297885152541831502
 CircleCollider2D:
@@ -119,6 +124,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.44
+--- !u!95 &-6584132588325966075
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297885152541831603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb532f3713055854a87e1264cf1762b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5297885152656399564
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7189961887419452388}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,12 +100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6987cec5f989a84f993ababa2e71d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEndless: 0
   isMoving: 1
   target: {fileID: 0}
   rotation: 0
   moveSpeed: 4
   roateSpeed: 0.35
   calculate: 1
+  time: 0
 --- !u!50 &7189961887419452389
 Rigidbody2D:
   serializedVersion: 4
