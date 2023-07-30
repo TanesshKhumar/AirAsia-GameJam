@@ -583,6 +583,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 736960326}
     m_Modifications:
+    - target: {fileID: 1006652049, guid: 820bab806946f6c44b72274a982f4fb9, type: 3}
+      propertyPath: plane
+      value: 
+      objectReference: {fileID: 7189961887182893656}
+    - target: {fileID: 1006652049, guid: 820bab806946f6c44b72274a982f4fb9, type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 5297885153934944720}
+    - target: {fileID: 1006652049, guid: 820bab806946f6c44b72274a982f4fb9, type: 3}
+      propertyPath: planeChild
+      value: 
+      objectReference: {fileID: 7189961887182893657}
+    - target: {fileID: 935285415148285576, guid: 820bab806946f6c44b72274a982f4fb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1648685557}
+    - target: {fileID: 935285415148285576, guid: 820bab806946f6c44b72274a982f4fb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMap
+      objectReference: {fileID: 0}
     - target: {fileID: 2646948002774896834, guid: 820bab806946f6c44b72274a982f4fb9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -828,6 +848,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1b2675825c5f543881f54eb445e76f, type: 3}
+--- !u!212 &5297885153934944720 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5297885152541831601, guid: fb1b2675825c5f543881f54eb445e76f, type: 3}
+  m_PrefabInstance: {fileID: 5297885153934944719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7189961887182893655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -897,3 +922,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd6649a3e63a04c43990a6708d72f0f2, type: 3}
+--- !u!212 &7189961887182893656 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7189961887419452408, guid: cd6649a3e63a04c43990a6708d72f0f2, type: 3}
+  m_PrefabInstance: {fileID: 7189961887182893655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7189961887182893657 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7189961887716568629, guid: cd6649a3e63a04c43990a6708d72f0f2, type: 3}
+  m_PrefabInstance: {fileID: 7189961887182893655}
+  m_PrefabAsset: {fileID: 0}

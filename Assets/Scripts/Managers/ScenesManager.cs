@@ -28,14 +28,14 @@ public class ScenesManager : MonoBehaviour
         Indonesia11
     }
 
-    public void LoadScene (Scene scene)
+    public void LoadScene(Scene scene)
     {
         SceneManager.LoadScene(scene.ToString());
     }
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void LoadMainMenu()
@@ -43,5 +43,16 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene(Scene.MainMenu.ToString());
     }
 
+    public void LoadMap()
+    {
+        SceneManager.LoadScene(Scene.Map.ToString());
+        Time.timeScale = 1.0f;
+    }
+
+    public void LoadCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
 
 }
