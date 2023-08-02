@@ -163,7 +163,7 @@ public class TargetScript : MonoBehaviour
 
                 active = false;
 
-                //FindAnyObjectByType<AudioManager>().Play("badtap");
+                FindAnyObjectByType<AudioManager>().Play("badtap");
             }
         }
 

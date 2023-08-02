@@ -452,7 +452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -198.99998, y: 470.83997}
+  m_AnchoredPosition: {x: -198.99998, y: 543}
   m_SizeDelta: {x: 19988.195, y: 6020.792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &714461246
@@ -1266,7 +1266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  yPosLimit: -51.2
+  yPosLimit: -32.5
 --- !u!1001 &1734174668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5585501250663686180, guid: 61016a0beebcf1f4ab51bba6f10c5797, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 502.99997
+      value: 579
       objectReference: {fileID: 0}
     - target: {fileID: 5585501250663686180, guid: 61016a0beebcf1f4ab51bba6f10c5797, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2532,7 +2532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199, y: 503}
+  m_AnchoredPosition: {x: -199, y: 584}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6576227511556517269

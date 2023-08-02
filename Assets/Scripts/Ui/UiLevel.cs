@@ -16,8 +16,8 @@ public class UiLevel : MonoBehaviour
     
     void Start()
     {
-        //FindAnyObjectByType<AudioManager>().Stop("bgm");
-        //FindAnyObjectByType<AudioManager>().Play("gamebgm");
+        FindAnyObjectByType<AudioManager>().Stop("bgm");
+        FindAnyObjectByType<AudioManager>().Play("gamebgm");
     }
 
     public void TogglePause()

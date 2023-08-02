@@ -61,17 +61,17 @@ public class PlaneScript : MonoBehaviour
         time += Time.deltaTime;
         if (isEndless)
         {
-            if (time < 120)
+            if (time < 30)
             {
                 moveSpeed= 4;
                 roateSpeed= 0.3f;
             }
-            else if (time < 180)
+            else if (time < 60)
             {
                 moveSpeed = 5.2f;
                 roateSpeed = 0.2f;
             }
-            else if (time < 240)
+            else if (time < 90)
             {
                 moveSpeed = 6.7f;
                 roateSpeed = 0.1f;
@@ -98,9 +98,12 @@ public class PlaneScript : MonoBehaviour
                 moveSpeed = 0; 
                 GetComponent<SpriteRenderer>().enabled = false;
                 transform.GetChild(0).GetComponent<SpriteRenderer>().enabled=false;
-                GameObject.Find("Target").GetComponent<SpriteRenderer>().enabled = false; 
-                GameObject.Find("-UI-").transform.GetChild(3).gameObject.SetActive(true); 
-                //FindAnyObjectByType<AudioManager>().Play("lose"); 
+                GameObject.Find("Target").GetComponent<SpriteRenderer>().enabled = false;
+                if (GameObject.Find("-UI-").transform.childCount == 3)
+                    GameObject.Find("-UI-").transform.GetChild(2).gameObject.SetActive(true);
+                else
+                    GameObject.Find("-UI-").transform.GetChild(3).gameObject.SetActive(true); 
+                FindAnyObjectByType<AudioManager>().Play("lose"); 
                 break;
             case 1: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.19f, 0.19f, 0.19f); break;
             case 2: transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.02f, 0.09f, 0.09f); break;
